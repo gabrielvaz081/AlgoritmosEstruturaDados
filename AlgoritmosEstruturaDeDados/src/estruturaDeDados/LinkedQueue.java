@@ -56,7 +56,7 @@ public class LinkedQueue implements Queue{
 		return this.size;
 	}
 	
-	public class Node{
+	private class Node{
 		
 		private int value;
 		private Node next;

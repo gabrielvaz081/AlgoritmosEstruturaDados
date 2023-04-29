@@ -11,7 +11,7 @@ public class DoublyLinkedList implements List {
 		this.tail = null;
 		this.size = 0;
 	}
-	public class Node {
+	private class Node {
 		private int value;
 		private Node previus;
 		private Node next;

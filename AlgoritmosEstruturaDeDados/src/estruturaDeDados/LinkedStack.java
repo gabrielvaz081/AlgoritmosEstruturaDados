@@ -52,7 +52,7 @@ public class LinkedStack implements Stack{
 		return this.size;
 	}
 	
-	public class Node{
+	private class Node{
 		
 		private int value;
 		private Node next;
