@@ -13,11 +13,9 @@ public class MainBinarySearchTree {
 		bst.add(15);
 		bst.add(29);
 		
-		System.out.println(bst.contains(3));
-		System.out.println(bst.contains(7));
-		System.out.println(bst.contains(35));
-		System.out.println(bst.contains(13));
-
+		bst.remove(37);
+		
+		bst.preOrderTraversal();
 	}
 
 }

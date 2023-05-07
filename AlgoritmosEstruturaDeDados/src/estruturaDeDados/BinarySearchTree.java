@@ -44,8 +44,36 @@ public class BinarySearchTree implements Tree{
 
 	@Override
 	public void remove(int value) {
-		// TODO Auto-generated method stub
+		this.root = remove(value, this.root);
 		
+	}
+	
+	private Node remove(int value, Node node) {
+		if(node != null) {
+			if(value == node.getValue()) {
+				if(node.left == null && node.right == null) {
+					return null;
+				} else if(node.left == null || node.right == null) {
+					return node.getLeft() == null ? node.getRight() : node.getLeft();
+				} else {
+					Node inOrderPredecessor = node.getLeft();
+					while(inOrderPredecessor.getRight() != null) {
+						inOrderPredecessor = inOrderPredecessor.getRight();
+					}
+					node.value = inOrderPredecessor.getValue();
+					node.left = remove(inOrderPredecessor.value, node.left);
+					return node;
+				}
+			} else if(value < node.getValue()) {
+				node.left = remove(value, node.left);
+				return node;
+			} else {
+				node.right = remove(value, node.right);
+				return node;
+			}
+		}
+		
+		return null;
 	}
 	
 	public void preOrderTraversal() {
