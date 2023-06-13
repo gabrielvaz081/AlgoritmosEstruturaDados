@@ -1,2 +1,2 @@
 # AlgoritmosEstruturaDados
-Repositório destinado as implementações dos Algoritmos e das Estruturas de Dados.
+Repositório destinado às implementações dos Algoritmos e das Estruturas de Dados.
