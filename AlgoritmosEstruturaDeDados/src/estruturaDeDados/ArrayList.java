@@ -62,9 +62,6 @@ public class ArrayList implements List{
 	@Override
 	public void remove(int index) {
 		if(index >= 0 && index < this.size) {
-			if(this.size >= this.length) {
-				duplicated();
-			}
 			for(int i = index; i < this.size; i++) {
 				this.array[i] = this.array[i + 1];
 			}
